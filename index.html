@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gastón Creativo | Diseño Digital para Emprendedores</title>
+
+    <meta
+        name="description"
+        content="Gastón Creativo. Diseño digital, branding, redes sociales, páginas web y soluciones creativas para emprendedores y marcas."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --navy: #111b32;
+            --navy-dark: #080e1d;
+            --navy-light: #1c2944;
+
+            --gold: #d4aa48;
+            --gold-light: #e6c66c;
+
+            --white: #ffffff;
+            --cream: #faf9f6;
+            --gray: #727272;
+            --light-gray: #eeeeeb;
+
+            --serif: 'Cormorant Garamond', serif;
+            --sans: 'Montserrat', sans-serif;
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            color: var(--navy);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            z-index: 1000;
+
+            background: rgba(255,255,255,0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(17,27,50,0.08);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 15px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 155px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: var(--navy);
+
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav-button {
+            background: var(--navy);
+            color: white !important;
+
+            padding: 12px 20px;
+
+            font-size: 10px;
+        }
+
+        .nav-button:hover {
+            background: var(--gold);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(8,14,29,.98),
+                    rgba(17,27,50,.92)
+                );
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 140px 30px 90px;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border: 1px solid rgba(212,170,72,.18);
+
+            border-radius: 50%;
+
+            right: -180px;
+            top: 80px;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+            height: 400px;
+
+            border: 1px solid rgba(212,170,72,.10);
+
+            border-radius: 50%;
+
+            right: -80px;
+            top: 180px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+
+            margin: auto;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            color: var(--gold-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            font-size: 11px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            color: white;
+
+            font-family: var(--serif);
+
+            font-size: clamp(60px, 8vw, 105px);
+
+            line-height: .88;
+
+            font-weight: 500;
+
+            max-width: 850px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-description {
+            color: rgba(255,255,255,.70);
+
+            max-width: 650px;
+
+            font-size: 16px;
+
+            font-weight: 300;
+
+            margin-top: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 16px 28px;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            transition: .3s;
+        }
+
+        .button-gold {
+            background: var(--gold);
+
+            color: white;
+        }
+
+        .button-gold:hover {
+            background: var(--gold-light);
+
+            transform: translateY(-3px);
+        }
+
+        .button-outline {
+            border: 1px solid rgba(255,255,255,.35);
+
+            color: white;
+        }
+
+        .button-outline:hover {
+            border-color: var(--gold);
+
+            color: var(--gold-light);
+        }
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        section {
+            padding: 110px 30px;
+        }
+
+        .container {
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .section-label {
+            color: var(--gold);
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 10px;
+
+            display: block;
+
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+
+            font-size: clamp(45px, 6vw, 65px);
+
+            font-weight: 500;
+
+            line-height: 1;
+
+            color: var(--navy);
+        }
+
+        .section-description {
+            max-width: 650px;
+
+            margin: 20px auto 0;
+
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        #servicios {
+            background: var(--cream);
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .service {
+            background: white;
+
+            padding: 38px 30px;
+
+            border: 1px solid rgba(17,27,50,.07);
+
+            position: relative;
+
+            transition: .4s;
+
+            min-height: 260px;
+        }
+
+        .service:hover {
+            transform: translateY(-7px);
+
+            box-shadow: 0 25px 50px rgba(17,27,50,.09);
+        }
+
+        .service-number {
+            color: var(--gold);
+
+            font-family: var(--serif);
+
+            font-size: 20px;
+        }
+
+        .service h3 {
+            font-family: var(--serif);
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            margin: 12px 0 10px;
+
+            color: var(--navy);
+        }
+
+        .service p {
+            font-size: 13px;
+
+            color: var(--gray);
+
+            line-height: 1.8;
+        }
+
+        .service-arrow {
+            position: absolute;
+
+            right: 25px;
+            bottom: 23px;
+
+            color: var(--gold);
+
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 480px;
+
+            background: var(--navy);
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            border: 1px solid var(--gold);
+
+            border-radius: 50%;
+
+            opacity: .6;
+        }
+
+        .about-image::after {
+            content: "GC";
+
+            font-family: var(--serif);
+
+            font-size: 150px;
+
+            color: var(--gold);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .about-content .section-label {
+            text-align: left;
+        }
+
+        .about-content h2 {
+            font-family: var(--serif);
+
+            font-size: 60px;
+
+            line-height: .95;
+
+            font-weight: 500;
+
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .gold-line {
+            width: 70px;
+
+            height: 2px;
+
+            background: var(--gold);
+
+            margin: 25px 0;
+        }
+
+
+        /* =====================================================
+           WHY
+        ===================================================== */
+
+        .why {
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .why .section-title {
+            color: white;
+        }
+
+        .why .section-description {
+            color: rgba(255,255,255,.60);
+        }
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 30px;
+        }
+
+        .why-item {
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        .why-icon {
+            font-family: var(--serif);
+
+            font-size: 45px;
+
+            color: var(--gold);
+        }
+
+        .why-item h3 {
+            font-family: var(--serif);
+
+            font-size: 25px;
+
+            margin: 12px 0;
+        }
+
+        .why-item p {
+            color: rgba(255,255,255,.60);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 30px;
+        }
+
+        .process {
+            text-align: center;
+        }
+
+        .process-number {
+            width: 58px;
+            height: 58px;
+
+            border: 1px solid var(--gold);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin: auto;
+
+            color: var(--gold);
+
+            font-family: var(--serif);
+
+            font-size: 24px;
+        }
+
+        .process h3 {
+            margin-top: 20px;
+
+            font-size: 14px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .process p {
+            color: var(--gray);
+
+            font-size: 12px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            background: var(--cream);
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: var(--serif);
+
+            font-size: clamp(48px, 7vw, 75px);
+
+            line-height: .95;
+
+            font-weight: 500;
+
+            color: var(--navy);
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .cta p {
+            max-width: 600px;
+
+            margin: 25px auto 35px;
+
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--navy-dark);
+
+            color: white;
+
+            padding: 70px 30px 25px;
+        }
+
+        .footer-grid {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 60px;
+        }
+
+        .footer-brand img {
+            width: 180px;
+
+            background: white;
+
+            padding: 8px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,.55);
+
+            font-size: 12px;
+
+            max-width: 400px;
+
+            margin-top: 20px;
+        }
+
+        footer h4 {
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: var(--gold);
+
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            display: block;
+
+            color: rgba(255,255,255,.65);
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--gold-light);
+        }
+
+        .copyright {
+            max-width: 1150px;
+
+            margin: 60px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,.1);
+
+            text-align: center;
+
+            color: rgba(255,255,255,.35);
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ===================================================== */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 58px;
+            height: 58px;
+
+            background: #25D366;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 23px;
+
+            z-index: 999;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            nav {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,1fr);
+
+                gap: 45px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .navbar {
+                padding: 14px 20px;
+            }
+
+            .logo img {
+                width: 125px;
+            }
+
+            .hero {
+                padding: 120px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 50px;
+            }
+
+            .about-image {
+                min-height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#inicio" class="logo">
+            <img src="logo.png" alt="Gastón Creativo">
+        </a>
+
+        <nav>
+
+            <a href="#servicios">Servicios</a>
+
+            <a href="#nosotros">Sobre mí</a>
+
+            <a href="#proceso">Proceso</a>
+
+            <a href="#contacto">Contacto</a>
+
+            <a href="#contacto" class="nav-button">
+                Trabajemos juntos
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-container">
+
+        <div class="hero-label">
+            Diseño digital para emprendedores
+        </div>
+
+        <h1>
+            Tu idea merece
+            <span>verse increíble.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            En Gastón Creativo transformamos ideas, proyectos y emprendimientos
+            en marcas digitales profesionales, atractivas y listas para crecer.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#servicios" class="button button-gold">
+                Ver servicios
+            </a>
+
+            <a href="#contacto" class="button button-outline">
+                Quiero trabajar con vos
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section id="servicios">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                Lo que podemos crear
+            </span>
+
+            <h2 class="section-title">
+                Servicios creativos
+            </h2>
+
+            <p class="section-description">
+
+                Soluciones digitales pensadas para emprendedores,
+                profesionales, marcas personales y pequeños negocios.
+
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <article class="service">
+
+                <span class="service-number">01</span>
+
+                <h3>
+                    Identidad Visual
+                </h3>
+
+                <p>
+                    Creamos una identidad visual coherente para que tu marca
+                    tenga personalidad y sea reconocible.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">02</span>
+
+                <h3>
+                    Diseño de Logos
+                </h3>
+
+                <p>
+                    Logos modernos, elegantes y adaptados a las necesidades
+                    reales de tu emprendimiento.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">03</span>
+
+                <h3>
+                    Branding
+                </h3>
+
+                <p>
+                    Construimos el universo visual de tu marca: colores,
+                    tipografías, estilo y aplicaciones.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">04</span>
+
+                <h3>
+                    Kit para Redes
+                </h3>
+
+                <p>
+                    Un paquete visual completo para comenzar a comunicar
+                    tu negocio de manera profesional.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">05</span>
+
+                <h3>
+                    Plantillas Canva
+                </h3>
+
+                <p>
+                    Plantillas editables para que puedas crear contenido
+                    sin depender de un diseñador cada vez.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">06</span>
+
+                <h3>
+                    Posts & Carruseles
+                </h3>
+
+                <p>
+                    Diseños estratégicos para Instagram y otras plataformas
+                    que hacen que tu contenido destaque.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">07</span>
+
+                <h3>
+                    Historias
+                </h3>
+
+                <p>
+                    Diseñamos historias visualmente atractivas para promociones,
+                    lanzamientos, productos y servicios.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">08</span>
+
+                <h3>
+                    Presentaciones
+                </h3>
+
+                <p>
+                    Presentaciones profesionales para propuestas, reuniones,
+                    cursos, clases, ventas y proyectos.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">09</span>
+
+                <h3>
+                    E-books
+                </h3>
+
+                <p>
+                    Convertimos tus conocimientos y contenidos en guías
+                    digitales atractivas y profesionales.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">10</span>
+
+                <h3>
+                    Catálogos Digitales
+                </h3>
+
+                <p>
+                    Catálogos de productos y servicios diseñados para
+                    presentar tu oferta de manera clara y elegante.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">11</span>
+
+                <h3>
+                    Dossiers
+                </h3>
+
+                <p>
+                    Presentaciones comerciales, propuestas y documentos
+                    profesionales para mostrar tu negocio.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">12</span>
+
+                <h3>
+                    Landing Pages
+                </h3>
+
+                <p>
+                    Páginas enfocadas en presentar un producto, servicio,
+                    campaña o lanzamiento.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">13</span>
+
+                <h3>
+                    Páginas Web
+                </h3>
+
+                <p>
+                    Sitios web modernos, responsive y pensados para que
+                    tu emprendimiento tenga presencia profesional.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">14</span>
+
+                <h3>
+                    Mini Sitios
+                </h3>
+
+                <p>
+                    Una página simple con tus enlaces, servicios, contacto,
+                    redes sociales y llamados a la acción.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+            <article class="service">
+
+                <span class="service-number">15</span>
+
+                <h3>
+                    Pack de Lanzamiento
+                </h3>
+
+                <p>
+                    Todo lo necesario para presentar una nueva marca,
+                    producto o emprendimiento con una imagen profesional.
+                </p>
+
+                <span class="service-arrow">↗</span>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="nosotros">
+
+    <div class="container">
+
+        <div class="about">
+
+
+            <div class="about-image"></div>
+
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    Gastón Creativo
+                </span>
+
+                <h2>
+                    Diseño que convierte ideas en marcas.
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p>
+                    Muchos emprendedores tienen una gran idea,
+                    pero no siempre cuentan con las herramientas
+                    visuales para mostrarla de la mejor manera.
+                </p>
+
+                <p>
+                    Gastón Creativo nace para resolver justamente eso:
+                    crear soluciones digitales profesionales,
+                    accesibles y pensadas para personas que están
+                    construyendo su propio proyecto.
+                </p>
+
+                <p>
+                    Desde una identidad visual hasta una página web,
+                    cada proyecto se diseña buscando que tu negocio
+                    tenga una presencia digital coherente y memorable.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section class="why">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                Nuestra forma de trabajar
+            </span>
+
+            <h2 class="section-title">
+                Simple. Creativo. Profesional.
+            </h2>
+
+            <p class="section-description">
+                Queremos que contratar diseño sea una experiencia
+                sencilla y que el resultado realmente te sirva.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-item">
+
+                <div class="why-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Creatividad
+                </h3>
+
+                <p>
+                    Cada proyecto busca tener una personalidad propia.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <div class="why-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Estrategia
+                </h3>
+
+                <p>
+                    Diseñamos pensando en el objetivo de tu negocio.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <div class="why-icon">
+                    ∞
+                </div>
+
+                <h3>
+                    Cercanía
+                </h3>
+
+                <p>
+                    Trabajamos de forma directa y entendiendo tu proyecto.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <div class="why-icon">
+                    ★
+                </div>
+
+                <h3>
+                    Detalle
+                </h3>
+
+                <p>
+                    Cuidamos cada elemento para lograr un resultado profesional.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section id="proceso">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-label">
+                Cómo trabajamos
+            </span>
+
+            <h2 class="section-title">
+                Del concepto al resultado.
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Hablamos
+                </h3>
+
+                <p>
+                    Conocemos tu proyecto, tus objetivos y lo que necesitás.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Ideamos
+                </h3>
+
+                <p>
+                    Definimos una dirección visual y creativa para el proyecto.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Diseñamos
+                </h3>
+
+                <p>
+                    Transformamos la idea en una propuesta visual concreta.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Entregamos
+                </h3>
+
+                <p>
+                    Recibís tus archivos listos para utilizar.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contacto">
+
+    <div class="container">
+
+        <span class="section-label">
+            ¿Tenés un proyecto?
+        </span>
+
+        <h2>
+            Hagamos que tu marca se vea como imaginás.
+        </h2>
+
+        <p>
+            Contame qué estás creando y vemos juntos qué solución
+            digital puede ayudarte a llevar tu proyecto al siguiente nivel.
+        </p>
+
+        <!-- CAMBIAR ESTE NÚMERO POR TU WHATSAPP -->
+
+        <a
+            href="https://wa.me/59800000000?text=Hola%20Gastón%2C%20quiero%20consultar%20por%20un%20servicio."
+            class="button button-gold"
+            target="_blank"
+        >
+            Hablar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <img src="logo.png" alt="Gastón Creativo">
+
+            <p>
+                Diseño digital y soluciones creativas para emprendedores,
+                profesionales y marcas que quieren crecer.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Navegación
+            </h4>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#servicios">
+                Servicios
+            </a>
+
+            <a href="#nosotros">
+                Sobre mí
+            </a>
+
+            <a href="#proceso">
+                Proceso
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contacto
+            </h4>
+
+            <a href="#contacto">
+                WhatsApp
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Email
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Gastón Creativo · Diseño digital para emprendedores.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP FLOATING BUTTON
+===================================================== -->
+
+<a
+    href="https://wa.me/59894869 933?text=Hola%20Gastón%2C%20quiero%20consultar%20por%20un%20servicio."
+    class="whatsapp"
+    target="_blank"
+    aria-label="Contactar por WhatsApp"
+>
+    ☎
+</a>
+
+
+</body>
+
+</html>
