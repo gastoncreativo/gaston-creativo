@@ -1,693 +1,517 @@
 <!DOCTYPE html>
-<html lang="es-ES" class="hide-scroll">
-<head> 
-    <title>Hacer branding para empresas #html-templates-es-seo-one-item-suffix Live Demo</title>
-    <meta name="Keywords">
-    <meta name="Description">
-    
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gastón Creativo — Diseño y marca para emprendedores</title>
+<meta name="description" content="Estudio de diseño y branding de Gastón Figueredo: identidad visual, redes sociales, contenido digital y páginas web para emprendedores. Hablemos por WhatsApp.">
+<link rel="icon" href="gaston-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#131d35;
+    --navy-soft:#1d2c4d;
+    --paper:#fbf9f4;
+    --paper-alt:#f1ecdf;
+    --gold:#c99a3f;
+    --gold-light:#e8c579;
+    --gold-pale:#f6e6bd;
+    --text-mute: rgba(19,29,53,0.64);
+    --text-soft: rgba(251,249,244,0.76);
+    --radius: 18px;
+    --maxw: 1180px;
+  }
 
-    <link rel="shortcut icon" href="https://csite.nicepage.com/favicon.ico" type="image/x-icon">
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
 
-    
-    
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--navy);
+    font-family:'Montserrat', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
 
+  h1,h2,h3,.display{
+    font-family:'Playfair Display', serif;
+    line-height:1.12;
+    margin:0;
+    font-weight:600;
+  }
 
-    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+  .eyebrow{
+    font-family:'Montserrat', sans-serif;
+    font-size:0.74rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--gold);
+  }
 
-<link rel="preconnect" href="https://csite.nicepage.com" />
-<link rel="preconnect" href="https://capp.nicepage.com" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://www.googletagmanager.com" />
-<link rel="preconnect" href="https://images01.nicepagecdn.com" />
-<link rel="preconnect" href="https://images03.nicepagecdn.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  :focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
 
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  section{padding:100px 0;}
+  @media (max-width:720px){ section{padding:64px 0;} }
 
-<script src="//capp.nicepage.com/1260301faf4d3ecdecbe86dfe94468f97e4f5a7c/main-libs.js" ></script>
-<link href="//capp.nicepage.com/1260301faf4d3ecdecbe86dfe94468f97e4f5a7c/main-libs.css" rel="stylesheet" />
+  /* ---------- crown icon ---------- */
+  .crown{ display:inline-block; flex-shrink:0; }
 
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(19,29,53,0.92);
+    border-bottom:1px solid rgba(232,197,121,0.18);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:12px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+    color:var(--paper);
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand img{height:44px; width:auto;}
+  nav.links{display:flex; gap:32px; align-items:center;}
+  nav.links a.navlink{font-size:0.86rem; color:var(--text-soft); transition:color .2s; letter-spacing:0.02em;}
+  nav.links a.navlink:hover{color:var(--gold-light);}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 24px; border-radius:100px;
+    font-weight:600; font-size:0.88rem;
+    cursor:pointer; border:none; transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:linear-gradient(120deg,var(--gold-light),var(--gold)); color:#241a05;}
+  .btn-gold:hover{box-shadow:0 12px 26px -10px rgba(201,154,63,0.65);}
+  .btn-ghost{background:transparent; border:1.5px solid rgba(251,249,244,0.32); color:var(--paper);}
+  .btn-ghost-dark{background:transparent; border:1.5px solid rgba(19,29,53,0.25); color:var(--navy);}
 
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&family=Roboto:wght@200..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200..900&family=Roboto:wght@200..900&display=swap">
-    </noscript>
-
-
-
-
-
-<script>
-    window.isAuthenticated = 0;
-    window.useExternalGtmCode = 0;
-    window.clientUserId = 0;
-    window.clientUserName = '';
-    window.userCountryCode = '';
-    window.logPageEvent = 1;
-    window.userHasAdsParams = 0;
-    window.utmSourceFromReferrer = 0;
-    window.currentLang = 'es';
-    window.baseUrl = 'html-templates';
-    window.currentUrl = 'plantillas-html';
-    window.np_userId = '';
-    window.isAmplitudeInitialized = false;
-    window.sha256Email = '';
-    window.skipSetCountryCode = 0;
-
-    function getCookieOrLocalStorage(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) {
-                return c.substring(nameEQ.length, c.length);
-            }
-        }
-        var lsValue = localStorage.getItem(name);
-        return !!lsValue;
+  .nav-toggle{display:none; background:none; border:none; color:var(--paper); font-size:1.6rem; cursor:pointer;}
+  @media (max-width:900px){
+    nav.links{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--navy); flex-direction:column; align-items:flex-start;
+      padding:20px 24px 28px; gap:18px;
+      display:none;
+      border-bottom:1px solid rgba(232,197,121,0.18);
     }
-
-    function sendAnalyticsData(eventType, props, cb) {
-        var json = { data: {} };
-        json.userToken = np_userId;
-        json.data.adsParams = $.cookie('AdsParameters');
-        json.data.ga = $.cookie('_ga');
-        json.data.gac = $.cookie('_gac_UA-88868916-2');
-        json.data.userAgent = navigator.userAgent;
-        json.data.eventType = eventType;
-        json.data.props = props;
-        $.ajax({
-            'type': 'POST',
-            'url': '/Feedback/SendAdsLog',
-            'contentType': 'application/json; charset=utf-8',
-            'data': JSON.stringify(json),
-            'dataType': 'json',
-            'complete': cb || function() {}
-        });
-    }
-
-    function initializeAmplitudeUser() {
-        if (isAmplitudeInitialized) {
-            return;
-        }
-        isAmplitudeInitialized = true;
-
-        if (clientUserId > 0)
-        {
-            identifyAmplitudeUser(clientUserId, clientUserName);
-        }
-        else
-        {
-            identifyAmplitudeUser(null);
-        }
-    }
-
-    function sendAmplitudeAnalyticsData(eventName, eventProperties, userProperties, callback_function) {
-        initializeAmplitudeUser();
-
-        if (userProperties) {
-            if(userProperties.utm_source || userProperties.utm_campaign) {
-                var identify = new amplitude.Identify();
-                identify.setOnce("utm_campaign", userProperties.utm_campaign);
-                identify.setOnce("utm_source", userProperties.utm_source);
-                identify.setOnce("utm_content", userProperties.utm_content);
-                identify.setOnce("utm_group", userProperties.utm_group);
-                identify.setOnce("utm_term", userProperties.utm_term);
-                identify.setOnce("utm_page", userProperties.utm_page);
-                identify.setOnce("utm_page2", userProperties.utm_page);
-                identify.setOnce("referrer", userProperties.referrer);
-
-                amplitude.getInstance().identify(identify);
-
-                userProperties.utm_source_last = userProperties.utm_source;
-                userProperties.utm_campaign_last = userProperties.utm_campaign;
-                userProperties.utm_content_last = userProperties.utm_content;
-                userProperties.utm_group_last = userProperties.utm_group;
-                userProperties.utm_term_last = userProperties.utm_term;
-                userProperties.utm_page_last = userProperties.utm_page;
-            }
-
-            var userProps = objectWithoutProperties(userProperties, ["utm_campaign", "utm_source","utm_content", "utm_term", "utm_page", "utm_group", "referrer"]);
-            amplitude.getInstance().setUserProperties(userProps);
-        }
-
-        if (!eventProperties) {
-            eventProperties = {};
-        }
-
-        eventProperties.WebSite = 'true';
-        eventProperties.IsAuthenticated = window.isAuthenticated;
-        eventProperties.country_code = getCountryCode();
-        eventProperties.lang = window.currentLang || '';
-
-        var fullPageUrl = window.location.pathname.split('?')[0];
-        eventProperties.full_page_url = fullPageUrl;
-        eventProperties.page_url = clearPageUrl(fullPageUrl);
-
-        if (typeof callback_function === 'function') {
-            amplitude.getInstance().logEvent(eventName, eventProperties, callback_function);
-        } else {
-            amplitude.getInstance().logEvent(eventName, eventProperties);
-        }
-    }
-
-    function identifyAmplitudeUser(userId, token) {
-        if (userId) {
-            amplitude.getInstance().setUserProperties({
-                "Token": token,
-                "UserId": userId
-            });
-        }
-
-        var identify = new amplitude.Identify();
-        amplitude.getInstance().identify(identify);
-        if (userId) {
-            amplitude.getInstance().setUserId(userId);
-        }
-    }
-
-    function getUtmParamsFromUrl() {
-        var hash = window.location.hash;
-        var url = new URL(window.location.href);
-        if (hash && hash.indexOf('utm_') >= 0) {
-            url = new URL(window.location.origin + window.location.pathname + hash.replace('#', '?'));
-        }
-
-        if (!url.searchParams) {
-            return '';
-        }
-        return getUtmParams(url);
-    }
-
-    function hasGoogleIdFromUrl() {
-        var url = new URL(window.location.href);
-        if (!url.searchParams) {
-            return false;
-        }
-        return !!url.searchParams.get('gclid');
-    }
-
-    function waitForDOMAndAmplitude(callback) {
-        var domReady = false;
-        var ampReady = false;
-        let hasRun = false;
-
-        function tryRun() {
-            if (domReady && ampReady && !hasRun) {
-                hasRun = true;
-                callback();
-            }
-        }
-
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", function () {
-                domReady = true;
-                tryRun();
-            });
-        } else {
-            domReady = true;
-            tryRun();
-        }
-
-        window._onAmplitudeReady = function () {
-            var urlParams = new URLSearchParams(window.location.search);
-            var passedDeviceId = urlParams.get('amp_device_id');
-            var amplitudeConfig = passedDeviceId ? { deviceId: passedDeviceId } : {};
-            amplitude.getInstance().init("878f4709123a5451aff838c1f870b849", null, amplitudeConfig, function() {
-                ampReady = true;
-                tryRun();
-            });
-        };
-    }
-
-    function sendAnalyticsFromUrl(referrer, pageType) {
-        var urlIsAvailable = typeof URL === "function" || (navigator.userAgent.indexOf('MSIE') !== -1 && typeof URL === 'object');
-        if (!urlIsAvailable) {
-            return;
-        }
-
-        var utmParams = getUtmParamsFromUrl();
-        if (!utmParams) {
-            return;
-        }
-
-        var gclidFromUrl = utmParams.gclid;
-        var utmParamsFromUrl = !!utmParams.utmSource || !!utmParams.utmCampaign || !!utmParams.gclid;
-        if (!utmParamsFromUrl && userHasAdsParams)
-        {
-            utmParams = getUtmParamsFromCookie();
-        }
-
-        var canLog = canLogToAmplitude(pageType);
-        if (utmParamsFromUrl || utmSourceFromReferrer) {
-            var fullPageUrl = window.location.pathname.split('?')[0];
-            var pageUrl = clearPageUrl(fullPageUrl);
-            var userProps = {
-                "utm_source": utmParams.utmSource,
-                "utm_campaign": utmParams.utmCampaign,
-                "utm_content": utmParams.utmContent,
-                "utm_group": utmParams.utmGroup,
-                "utm_term": utmParams.utmTerm,
-                "utm_page": getUtmPageValue(pageUrl),
-                "utm_lang": window.currentLang || '',
-                "referrer": referrer
-            };
-
-            if (gclidFromUrl) {
-                var landingUrl = pageUrl.startsWith('/') && pageUrl !== '/' ? pageUrl.substr(1) : pageUrl;
-                userProps.landing_page = landingUrl;
-
-                var event = {
-                    'Page': landingUrl,
-                    'Url': window.location.href,
-                    'utm_campaign_event': utmParams.utmCampaign,
-                    'utm_group_event': utmParams.utmGroup
-
-                }
-                sendAmplitudeAnalyticsData('Landing Page', event, userProps);
-            } else {
-                var eventProps = {
-                    "utm_source": utmParams.utmSource,
-                    "utm_campaign": utmParams.utmCampaign,
-                    "utm_content": utmParams.utmContent,
-                    "utm_group": utmParams.utmGroup,
-                    "utm_term": utmParams.utmTerm
-                };
-
-                if (utmParams.utmSource === "elastic") {
-                    sendAmplitudeAnalyticsData('Email Click', eventProps);
-                }
-
-                if (canLog) {
-                    sendAmplitudeAnalyticsData('Campaign', eventProps, userProps);
-                }
-            }
-        }
-
-        if (logPageEvent && canLog || (pageType === 'Pricing Page' && window.isValidCountry(true))) {
-            var pageEventProps = {
-                'type': pageType,
-                'accepted_country': isValidCountry(),
-                'force_log': !canLog
-            };
-
-            if (utmParams.gclid) {
-                pageEventProps.googleClickId = utmParams.gclid;
-            }
-
-            sendAmplitudeAnalyticsData('Page View', pageEventProps);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        if (window.skipInitCookieConsent !== 1 && location.href.indexOf('/frame/') === -1 && window.location.href.indexOf('skipCookie') === -1) {
-            PureCookie.initCookieConsent();
-        }
-        if(!skipSetCountryCode) {
-            setCountryCode('https://location.nicepagesrv.com/country');
-        }
-        setUserIdCookie();
-    });
-</script>
-
-    <!-- Google Tag Manager -->
-    <script>
-        // Define dataLayer and the gtag function.
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        var consentDefaultValue = 'granted';
-        gtag('consent', 'default', {
-            'ad_storage': consentDefaultValue,
-            'ad_user_data': consentDefaultValue,
-            'ad_personalization': consentDefaultValue,
-            'analytics_storage': consentDefaultValue
-        });
-        
-        if (hasGoogleIdFromUrl()) {
-            useExternalGtmCode = 1;
-        }
-        
-        function loadGTM() {
-            var w = window, d = document, s = 'script', l = 'dataLayer';
-            var i = useExternalGtmCode ? 'W76XGFR' : 'GTM-W76XGFR';
-            var src = useExternalGtmCode
-                ? 'https://load.api9.nicepage.com/nldlswob.js?st=' + i
-                : 'https://www.googletagmanager.com/gtm.js?id=' + i;
-
-            w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-
-            var f = d.getElementsByTagName(s)[0];
-            var j = d.createElement(s);
-            var dl = l !== 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = src + dl;
-            f.parentNode.insertBefore(j, f);
-        }
-
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadGTM);
-        } else {
-            setTimeout(loadGTM, 2000);
-        }
-    </script>
-    <!-- End Google Tag Manager -->
-    <script>
-        (function() {
-            var hasRefParam = window.location.search.includes('fpr=');
-            var hasFromCookie = document.cookie.includes('_fprom_ref') || document.cookie.includes('_fprom_tid');
-
-            if (hasRefParam || hasFromCookie) {
-                window.fpr = window.fpr || function() {
-                    window.fpr.q = window.fpr.q || [];
-                    window.fpr.q[arguments[0] == 'set' ? 'unshift' : 'push'](arguments);
-                };
-                fpr("init", {cid: "yek6q14u"}); 
-                fpr("click");
-
-                const script = document.createElement('script');
-                script.src = "https://cdn.firstpromoter.com/fpr.js";
-                script.async = true;
-                document.head.appendChild(script);
-            }
-        })();
-    </script>
-    <!-- Facebook Pixel Code -->
-        <script>
-            if(window.hideFacebookPixelCode !== true) {
-                !function (f, b, e, v, n, t, s) {
-                    if (f.fbq) return; n = f.fbq = function () {
-                        n.callMethod ?
-                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                    };
-                    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-                    n.queue = []; t = b.createElement(e); t.async = !0;
-                    t.src = v; s = b.getElementsByTagName(e)[0];
-                    s.parentNode.insertBefore(t, s)
-                }(window, document, 'script',
-                    'https://connect.facebook.net/en_US/fbevents.js');
-
-                var fbInitOptions = { em: '' };
-                if (clientUserId > 0) {
-                    fbInitOptions.external_id = clientUserId;
-                }
-
-                fbq('init', '251025992170426', fbInitOptions);
-                fbq('track', 'PageView');
-            }
-        </script>
-        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=251025992170426&ev=PageView&noscript=1" /></noscript>
-    <!-- End Facebook Pixel Code -->
-<!-- Amplitude & ShareASale -->
-<script>
-    function loadAmplitude() {
-        (function(e,t){
-            var n=e.amplitude||{_q:[],_iq:{}};
-            var r=t.createElement("script");
-            r.type="text/javascript";
-            r.integrity="sha384-d/yhnowERvm+7eCU79T/bYjOiMmq4F11ElWYLmt0ktvYEVgqLDazh4+gW9CKMpYW";
-            r.crossOrigin="anonymous";
-            r.async=true;
-            r.src="https://cdn.amplitude.com/libs/amplitude-5.2.2-min.gz.js";
-            r.onload=function(){
-                if (!e.amplitude.runQueuedFunctions) {
-                    console.log("[Amplitude] Error: could not load SDK");
-                }
-                if (typeof window._onAmplitudeReady === 'function') {
-                    window._onAmplitudeReady();
-                }
-            };
-            var i=t.getElementsByTagName("script")[0];
-            i.parentNode.insertBefore(r,i);
-
-            function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this;}}
-            var o=function(){this._q=[];return this;}
-            var a=["add","append","clearAll","prepend","set","setOnce","unset"];
-            for(var u=0;u<a.length;u++){s(o,a[u]);}
-            n.Identify=o;
-            var c=function(){this._q=[];return this;}
-            var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
-            for(var p=0;p<l.length;p++){s(c,l[p]);}
-            n.Revenue=c;
-            var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"];
-            function v(e){for(var t=0;t<d.length;t++){(function(t){e[d[t]]=function(){e._q.push([d[t]].concat(Array.prototype.slice.call(arguments,0)));};})(t);}}
-            v(n);
-            n.getInstance=function(e){e=(!e||0===e.length?"$default_instance":e).toLowerCase();if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e]);}return n._iq[e];};
-            e.amplitude=n;
-        })(window,document);
-
-        waitForDOMAndAmplitude(function() {
-            var referrer = '';
-            var pageType = 'Template Page Preview';
-            sendAnalyticsFromUrl(referrer, pageType);
-        });
-    }
-
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadAmplitude);
-    } else {
-        setTimeout(loadAmplitude, 2000);
-    }
-
-    var shareasaleSSCID=shareasaleGetParameterByName("sscid");function shareasaleSetCookie(e,a,r,s,t){if(e&&a){var o,n=s?"; path="+s:"",i=t?"; domain="+t:"",S="";r&&((o=new Date).setTime(o.getTime()+r),S="; expires="+o.toUTCString()),document.cookie=e+"="+a+S+n+i+"; SameSite=None;Secure"}}function shareasaleGetParameterByName(e,a){a||(a=window.location.href),e=e.replace(/[\[\]]/g,"\\$&");var r=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(a);return r?r[2]?decodeURIComponent(r[2].replace(/\+/g," ")):"":null}shareasaleSSCID&&shareasaleSetCookie("shareasaleSSCID",shareasaleSSCID,94670778e4,"/");
-</script>
-
-
-
-
-
-<!--[if lt IE 9]>
-    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-
-
-
-
-
-
-    <script src="https://accounts.google.com/gsi/client?hl=en" defer></script>
-    <script>
-        window.newAuthUri = 'https://auth.nicepage.com/authorize';
-        document.addEventListener("DOMContentLoaded", function () {
-            if (typeof google === 'undefined') {
-                return;
-            }
-            try {
-                google.accounts.id.initialize({
-                    context: 'signin',
-                    client_id: '13150095650-mo8psu2colep6uv90a2mu6r87u87s35a.apps.googleusercontent.com',
-                    callback: window.handleCredentialResponse,
-                    use_fedcm_for_prompt: true,
-                });
-
-                if (window.renderGoogleSignIdButton) {
-                    google.accounts.id.renderButton(
-                        document.getElementById('google-signin-button'),
-                        {
-                            theme: 'filled_blue',
-                            size: 'large',
-                            text: window.renderSignUpGoogleButton ? 'signup_with' : 'signin_with',
-                            width: '250',
-                            locale: 'en',
-                        }
-                    );
-                }
-
-                // display the One Tap dialog
-                if (!window.hideGoogleSignIdPromt) {
-                    google.accounts.id.prompt();
-                }
-            } catch (e) {
-                console.error(e);
-                if (typeof sendMessageOnServer === 'function') {
-                    sendMessageOnServer('auth.js google.accounts.id.initialize error', { error: JSON.stringify(e, Object.getOwnPropertyNames(e)) });
-                }
-            }
-        });
-</script>
-
-
-    
-    <meta name="robots" content="noindex,nofollow">
-    <script type="text/javascript">
-        var device = '';
-        function init($) {
-            $('#previewDesktopBtn').click(function (e) {
-                setLivePreviewFrameSize($(this));
-                setActiveResponsiveButton(this);
-                e.preventDefault();
-            });
-
-            $('#previewLaptopBtn').click(function (e) {
-                setLivePreviewFrameSize($(this));
-                setActiveResponsiveButton(this);
-                e.preventDefault();
-            });
-            $('#previewTabletBtn').click(function (e) {
-                setLivePreviewFrameSize($(this));
-                setActiveResponsiveButton(this);
-                e.preventDefault();
-            });
-            $('#previewPhoneHorizontalBtn').click(function (e) {
-                setLivePreviewFrameSize($(this));
-                setActiveResponsiveButton(this);
-                e.preventDefault();
-            });
-            $('#previewPhoneBtn').click(function (e) {
-                setLivePreviewFrameSize($(this));
-                setActiveResponsiveButton(this);
-                e.preventDefault();
-            });
-
-            detectActiveResponsiveButton();
-        }
-
-        if (jQuery.isReady) {
-            init(jQuery);
-        } else {
-            jQuery(function ($) {
-                init($);
-            });
-        }
-
-        function setActiveResponsiveButton(btn) {
-            $(".page-preview-header > a").removeClass("active");
-            $(btn).addClass("active");
-        }
-
-        function detectActiveResponsiveButton() {
-            var d = device;
-            if (!d) {
-                d = 'desktop';
-            }
-            $("#preview" + d.charAt(0).toUpperCase() + d.substr(1) + "Btn").click();
-        }
-
-        function getDataPreviewSizeAttr(el) {
-            return el.closest("[data-preview-size]").attr("data-preview-size");
-        }
-
-        function setLivePreviewFrameSize(srcEl) {
-            var getScrollbarWidth = function () {
-                var s = $('<div style="width:100px;height:100px;overflow:scroll;visibility:hidden;position:absolute;top:-99999px"><div style="height:200px;"></div></div>')
-                    .appendTo("body");
-                var res = s.width() - s.find("div").last().width();
-                s.remove();
-                return res;
-            };
-            var attr = getDataPreviewSizeAttr(srcEl);
-            $('#livePreviewFrame').width(attr.indexOf("%") !== -1 ? attr : parseInt(attr, 10) + getScrollbarWidth());
-        }
-
-    </script>
-    <style>
-        .dialog-wrapper {
-            display: none !important;
-        }
-
-        .wrap,
-        #main {
-            height: 100vh;
-            margin: 0 !important;
-        }
-
-        iframe {
-            display: none;
-        }
-
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        .page-preview {
-            border-radius: 0;
-            height: 100%;
-        }
-
-        .page-preview-header {
-            background: #f2f2f2;
-            border: none;
-            height: 70px;
-            position: relative;
-            text-align: center;
-        }
-
-        .page-preview-header > a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 4px;
-        }
-
-        .page-preview-header > a:hover {
-            background: #e2f0fc;
-            text-decoration: none;
-        }
-
-        .page-preview-header > a.active {
-            background: #c9e4f9;
-        }
-
-        .page-preview-header > .close {
-            float: right;
-            margin-right: 10px;
-        }
-
-        .page-preview-body {
-            height: calc(100% - 70px);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .page-preview-body iframe {
-            border: none;
-            display: inline-block;
-            height: 100%;
-        }
-    </style>
-
+    nav.links.open{display:flex;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ background:var(--navy); color:var(--paper); padding:88px 0 90px; position:relative; overflow:hidden; }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(48% 42% at 88% 10%, rgba(201,154,63,0.22), transparent 65%);
+    pointer-events:none;
+  }
+  .hero .wrap{ position:relative; display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center; }
+  @media (max-width:920px){ .hero .wrap{grid-template-columns:1fr; gap:44px;} }
+
+  .hero h1{ font-size:clamp(2.1rem, 4.4vw, 3.4rem); margin-top:18px; }
+  .hero h1 em{ font-style:italic; color:var(--gold-light); }
+  .hero p.lede{ margin-top:22px; font-size:1.05rem; line-height:1.7; color:var(--text-soft); max-width:520px; }
+  .hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;}
+
+  .trust-row{ display:flex; gap:28px; margin-top:48px; flex-wrap:wrap; }
+  .trust-item{ display:flex; align-items:baseline; gap:8px; }
+  .trust-item .num{ font-family:'Playfair Display'; font-weight:700; color:var(--gold-light); font-size:1.3rem; }
+  .trust-item .lbl{ font-size:0.78rem; color:var(--text-soft); max-width:120px; line-height:1.3; }
+
+  .hero-photo{ position:relative; }
+  .hero-photo .frame{
+    border-radius:24px; overflow:hidden; border:2px solid var(--gold);
+    box-shadow:0 30px 60px -24px rgba(0,0,0,0.55);
+    aspect-ratio: 4/5;
+  }
+  .hero-photo .frame img{width:100%; height:100%; object-fit:cover;}
+  .hero-photo .tag{
+    position:absolute; bottom:-18px; left:-18px;
+    background:var(--paper); color:var(--navy);
+    padding:14px 20px; border-radius:14px;
+    box-shadow:0 18px 30px -14px rgba(0,0,0,0.35);
+    font-size:0.82rem; font-weight:600; max-width:200px; line-height:1.4;
+    display:flex; align-items:center; gap:10px;
+  }
+  @media (max-width:920px){ .hero-photo{max-width:340px; margin:0 auto;} }
+
+  /* ---------- VALUES ---------- */
+  .values{ background:var(--paper-alt); border-bottom:1px solid rgba(19,29,53,0.06); }
+  .values .wrap{ display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+  @media (max-width:900px){ .values .wrap{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .values .wrap{grid-template-columns:1fr;} }
+  .value-item h3{ font-size:1.02rem; font-family:'Montserrat'; font-weight:700; margin-bottom:8px; }
+  .value-item p{ margin:0; font-size:0.9rem; color:var(--text-mute); line-height:1.55; }
+
+  /* ---------- SERVICES ---------- */
+  .price-note{ text-align:center; max-width:560px; margin:0 auto 56px; font-size:0.92rem; color:var(--text-mute); font-style:italic; }
+  section.cat-dark .price-note{color:var(--text-soft);}
+
+  .cat-header{ display:flex; align-items:center; gap:14px; margin-bottom:44px; }
+  .cat-badge{
+    width:46px; height:46px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--gold-pale); flex-shrink:0; font-size:1.3rem;
+  }
+  section.cat-dark .cat-badge{background:rgba(232,197,121,0.16);}
+  .cat-label .eyebrow{opacity:.9;}
+  .cat-label h2{font-size:1.55rem; margin-top:4px;}
+
+  .card-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  .card{
+    border-radius:var(--radius); padding:26px 24px;
+    background:#fff; border:1px solid rgba(19,29,53,0.08);
+    transition:transform .2s ease, box-shadow .2s ease;
+    display:flex; flex-direction:column;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 20px 32px -20px rgba(19,29,53,0.28);}
+  .card h3{ font-family:'Montserrat'; font-weight:700; font-size:1rem; margin-bottom:8px; }
+  .card p{ margin:0; font-size:0.88rem; line-height:1.55; color:var(--text-mute); flex-grow:1; }
+  .card .price{
+    margin-top:16px; align-self:flex-start;
+    font-family:'Montserrat'; font-weight:700; font-size:0.82rem;
+    color:var(--navy); background:var(--gold-pale);
+    padding:6px 14px; border-radius:100px;
+  }
+  .card .thumb{ border-radius:12px; overflow:hidden; margin-bottom:16px; aspect-ratio:1; }
+  .card .thumb img{width:100%; height:100%; object-fit:cover;}
+
+  section.cat-dark{ background:var(--navy); color:var(--paper); }
+  section.cat-dark .card{ background:var(--navy-soft); border-color:rgba(232,197,121,0.16); }
+  section.cat-dark .card p{ color:var(--text-soft); }
+  section.cat-dark .card .price{ background:rgba(232,197,121,0.16); color:var(--gold-light); }
+
+  /* ---------- PROPOSAL BANNER ---------- */
+  .proposal{
+    background:var(--paper-alt);
+    border-radius:24px; margin:0 24px;
+    padding:52px 40px; text-align:center;
+  }
+  .proposal h3{ font-size:1.5rem; margin-bottom:14px; }
+  .proposal p{ color:var(--text-mute); max-width:480px; margin:0 auto 26px; font-size:0.96rem; line-height:1.6; }
+
+  /* ---------- PRÓXIMAMENTE ---------- */
+  .soon{background:var(--paper);}
+  .tag-cloud{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    padding:10px 16px; border-radius:100px; font-size:0.83rem;
+    background:#fff; border:1px dashed rgba(19,29,53,0.22); color:var(--text-mute);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:60px; align-items:center; }
+  @media (max-width:860px){ .about{grid-template-columns:1fr;} }
+  .about-photo{ border-radius:22px; overflow:hidden; border:2px solid var(--gold); aspect-ratio:3/4; }
+  .about-photo img{width:100%; height:100%; object-fit:cover;}
+  .about h2{ font-size:2rem; margin-bottom:20px; }
+  .about p{ font-size:1rem; line-height:1.75; color:var(--text-mute); margin-bottom:16px; }
+  .about-quote{
+    border-left:3px solid var(--gold); padding-left:18px; margin:26px 0;
+    font-style:italic; color:var(--navy); font-family:'Playfair Display'; font-size:1.05rem;
+  }
+  .stat-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+  .stat-block{
+    background:var(--gold-pale); border-radius:14px; padding:18px 20px;
+    flex:1 1 150px; font-size:0.86rem; font-weight:600; line-height:1.4; color:var(--navy);
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    background:linear-gradient(120deg,var(--navy),var(--navy-soft) 70%);
+    color:#fff; text-align:center; border-radius:32px;
+    margin:0 24px; padding:80px 32px; position:relative; overflow:hidden;
+  }
+  .final-cta::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(50% 60% at 50% 0%, rgba(201,154,63,0.28), transparent 70%);
+  }
+  .final-cta > *{position:relative;}
+  .final-cta h2{ font-size:clamp(1.7rem,3.6vw,2.5rem); margin-bottom:16px; color:#fff; }
+  .final-cta p{ font-size:1rem; color:var(--text-soft); max-width:460px; margin:0 auto 30px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy); color:var(--text-soft); padding:56px 0 32px; margin-top:40px;}
+  .foot-inner{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; align-items:center;}
+  .foot-inner .brand img{height:36px;}
+  .foot-links{display:flex; gap:24px; font-size:0.85rem;}
+  .foot-links a:hover{color:var(--gold-light);}
+  .foot-bottom{
+    margin-top:40px; padding-top:24px; border-top:1px solid rgba(232,197,121,0.14);
+    font-size:0.78rem; color:rgba(251,249,244,0.42);
+  }
+
+  /* ---------- FLOATING WHATSAPP ---------- */
+  .wa-float{
+    position:fixed; right:22px; bottom:22px; z-index:60;
+    width:60px; height:60px; border-radius:50%;
+    background:#25d366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 28px -8px rgba(37,211,102,0.65);
+  }
+  .wa-float::before{
+    content:""; position:absolute; inset:0; border-radius:50%;
+    background:#25d366; opacity:.55;
+    animation:pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse{ 0%{transform:scale(1); opacity:.55;} 100%{transform:scale(1.9); opacity:0;} }
+  .wa-float svg{position:relative; z-index:2;}
+
+  ::selection{background:var(--gold-light); color:var(--navy);}
+</style>
 </head>
-    <body>
-        
+<body>
 
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><img src="gaston-logo.png" alt="Gastón Creativo"></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks">
+      <a class="navlink" href="#servicios">Servicios</a>
+      <a class="navlink" href="#sobre-mi">Sobre mí</a>
+      <a class="navlink" href="#contacto">Contacto</a>
+      <a class="btn btn-gold" href="https://wa.me/59894869933?text=Hola%20Gast%C3%B3n%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios%20de%20dise%C3%B1o" target="_blank" rel="noopener">Escribime</a>
+    </nav>
+  </div>
+</header>
 
-<div class="page-preview">
-    <div class="page-preview-header">
-        <a class="hidden-sm hidden-xs" href="#" id="previewDesktopBtn" data-preview-size="100%"><img alt="Responsive Desktop Mode" src="//csite.nicepage.com/Images/Site/responsive-desktop.png"></a>
-        <a class="hidden-sm hidden-xs" href="#" id="previewLaptopBtn" data-preview-size="1040px"><img alt="Responsive Laptop Mode" src="//csite.nicepage.com/Images/Site/responsive-laptop.png"></a>
-        <a class="hidden-xs" href="#" id="previewTabletBtn" data-preview-size="820px"><img alt="Responsive Tablet Mode" src="//csite.nicepage.com/Images/Site/responsive-tablet.png"></a>
-        <a class="hidden-xs" href="#" id="previewPhoneHorizontalBtn" data-preview-size="640px"><img alt="Responsive Phone Horizontal Mode" src="//csite.nicepage.com/Images/Site/responsive-phone-horizontal.png"></a>
-        <a class="hidden-xs" href="#" id="previewPhoneBtn" data-preview-size="440px"><img alt="Responsive Phone Mode" src="//csite.nicepage.com/Images/Site/responsive-phone.png"></a>
-        <a class="close" href="/es/ht/82540/hacer-branding-para-empresas-plantilla-html"><img alt="Close" src="//csite.nicepage.com/Images/Site/icon-close.png"></a>
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Diseño &amp; estrategia de marca</span>
+        <h1>Le doy identidad a tu marca y <em>voz</em> a tu emprendimiento.</h1>
+        <p class="lede">Soy Gastón Figueredo, estratega de marca y creador de contenido. Ayudo a emprendedores y marcas personales a ordenar sus ideas, construir un mensaje claro y transformar su conocimiento en ventas reales.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="https://wa.me/59894869933?text=Hola%20Gast%C3%B3n%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios%20de%20dise%C3%B1o" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.25 0 4.35.87 5.94 2.46a8.3 8.3 0 0 1 2.45 5.87c0 4.56-3.75 8.27-8.35 8.27a8.3 8.3 0 0 1-4.18-1.14l-.3-.17-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.28-4.43c0-4.55 3.75-8.33 8.21-8.33z"/></svg>
+            Hablar por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios y precios</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item"><span class="num">+5</span><span class="lbl">años de experiencia en el sector del marketing</span></div>
+          <div class="trust-item"><span class="num">+17</span><span class="lbl">clientes satisfechos con su posicionamiento digital</span></div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="frame"><img src="gaston-foto-hero.png" alt="Gastón Figueredo trabajando en su estudio de diseño"></div>
+        <div class="tag">
+          <svg class="crown" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z" fill="#c99a3f"/><circle cx="3" cy="6" r="1.6" fill="#c99a3f"/><circle cx="21" cy="6" r="1.6" fill="#c99a3f"/><circle cx="12" cy="3.5" r="1.6" fill="#c99a3f"/></svg>
+          Diseño con dirección, coherencia y estrategia
+        </div>
+      </div>
     </div>
-    <div class="page-preview-body">
-        <iframe id="livePreviewFrame" src="https://website82539.nicepage.io/es/home.html?version=8e132a1c-1328-40fd-839e-9f609706718c" width="1057" height="640" style="width:100%;"></iframe>
-    </div>
-</div>
-<a style="position:absolute;top:17px;left:10px;" href="/"><img alt="NicePage.com" src="//csite.nicepage.com/Images/logo-w.png"></a>
+  </section>
 
-        <script>
-            if (window.parent) {
-                var _w = 0, _h = 0;
-                var updateFormSize = function () {
-                    var form = $('form.shaped-form-extended,form.shaped-form');
-                    var w = form.outerWidth(true);
-                    var h = form.outerHeight(true);
-                    if (Math.abs(_w - w) > 5 || Math.abs(_h - h) > 5) {
-                        _w = w;
-                        _h = h;
-                        var msg = { key: 'login-frame-size', width: w, height: h };
-                        window.parent.postMessage(msg, "*");
-                    }
-                    setTimeout(updateFormSize, 300);
-                }
-                updateFormSize();
-            }
-        </script>
-    </body>
+  <!-- VALUES -->
+  <section class="values">
+    <div class="wrap">
+      <div class="value-item"><h3>Diseño a tu medida</h3><p>Cada pieza pensada para tu marca. Nunca una plantilla genérica.</p></div>
+      <div class="value-item"><h3>Entrega rápida</h3><p>Proyectos que avanzan en días, no en meses de espera.</p></div>
+      <div class="value-item"><h3>Comunicación directa</h3><p>Hablamos por WhatsApp, sin formularios ni vueltas.</p></div>
+      <div class="value-item"><h3>Mentor en redes</h3><p>Además de diseñar, te ayudo a mostrar tu marca en redes sociales.</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <div id="servicios">
+
+    <section>
+      <div class="wrap">
+        <p class="price-note">Los precios son orientativos y están en dólares (USD). Cada proyecto se cotiza según tu marca y objetivos.</p>
+        <div class="cat-header">
+          <div class="cat-badge">🎨</div>
+          <div class="cat-label"><span class="eyebrow">Diseño &amp; Marca</span><h2>Le damos forma a tu identidad</h2></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>Identidad Visual</h3><p>Creamos el universo visual de tu marca: colores, tipografías, estilo y elementos gráficos.</p><span class="price">Desde $70</span></div>
+          <div class="card"><h3>Diseño de Logos</h3><p>Logotipos profesionales, modernos y hechos a medida de tu emprendimiento.</p><span class="price">Desde $35</span></div>
+          <div class="card"><h3>Branding</h3><p>Desarrollo integral de la imagen y la personalidad visual de tu marca.</p><span class="price">Desde $120</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-dark">
+      <div class="wrap">
+        <div class="cat-header">
+          <div class="cat-badge">📱</div>
+          <div class="cat-label"><span class="eyebrow">Redes Sociales</span><h2>Comunicá tu marca todos los días</h2></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>Kit para Redes Sociales</h3><p>Pack visual para empezar a comunicar tu marca de forma profesional.</p><span class="price">Desde $40</span></div>
+          <div class="card"><h3>Plantillas Editables en Canva</h3><p>Plantillas personalizadas para que crees contenido vos mismo, fácil y rápido.</p><span class="price">Desde $30</span></div>
+          <div class="card"><h3>Posts &amp; Carruseles</h3><p>Publicaciones y carruseles diseñados para Instagram y otras redes.</p><span class="price">Desde $25</span></div>
+          <div class="card"><h3>Historias para Redes</h3><p>Diseños para stories, promociones, lanzamientos, productos y servicios.</p><span class="price">Desde $20</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cat-header">
+          <div class="cat-badge">📄</div>
+          <div class="cat-label"><span class="eyebrow">Contenido Digital</span><h2>Documentos que venden por vos</h2></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>Presentaciones Profesionales</h3><p>Para propuestas, reuniones, cursos, clases, ventas y proyectos.</p><span class="price">Desde $45</span></div>
+          <div class="card">
+            <div class="thumb"><img src="ejemplo-ebook.png" alt="Ejemplo de e-book diseñado por Gastón Creativo"></div>
+            <h3>E-books &amp; Guías Digitales</h3><p>Maquetación y diseño de libros electrónicos, guías, manuales y descargables.</p><span class="price">Desde $60</span>
+          </div>
+          <div class="card"><h3>Catálogos Digitales</h3><p>Catálogos profesionales de tus productos o servicios.</p><span class="price">Desde $50</span></div>
+          <div class="card"><h3>Dossiers &amp; Propuestas Comerciales</h3><p>Documentos visuales para presentar tu negocio, servicios y proyectos a clientes.</p><span class="price">Desde $45</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-dark">
+      <div class="wrap">
+        <div class="cat-header">
+          <div class="cat-badge">💻</div>
+          <div class="cat-label"><span class="eyebrow">Diseño Web</span><h2>Tu marca, también online</h2></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>Landing Pages</h3><p>Páginas pensadas para promocionar un producto, servicio, campaña o lanzamiento.</p><span class="price">Desde $90</span></div>
+          <div class="card"><h3>Páginas Web</h3><p>Sitios completos, responsive y adaptados a la identidad de tu emprendimiento.</p><span class="price">Desde $180</span></div>
+          <div class="card"><h3>Mini Sitios / Link en Bio</h3><p>Una página compacta con tus servicios, redes, contacto y llamados a la acción.</p><span class="price">Desde $35</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cat-header">
+          <div class="cat-badge">🚀</div>
+          <div class="cat-label"><span class="eyebrow">Emprendimientos</span><h2>Para lanzar con fuerza</h2></div>
+        </div>
+        <div class="card-grid">
+          <div class="card"><h3>Pack de Lanzamiento</h3><p>Solución integral para quienes están lanzando una marca, producto o emprendimiento: identidad + piezas digitales + presencia online.</p><span class="price">Desde $250</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="proposal">
+          <svg class="crown" width="30" height="30" viewBox="0 0 24 24" fill="none" style="margin-bottom:14px;"><path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8z" fill="#c99a3f"/><circle cx="3" cy="6" r="1.6" fill="#c99a3f"/><circle cx="21" cy="6" r="1.6" fill="#c99a3f"/><circle cx="12" cy="3.5" r="1.6" fill="#c99a3f"/></svg>
+          <h3>¿Necesitás algo que no está en la lista?</h3>
+          <p>Contame en qué estás trabajando y armamos juntos una propuesta a tu medida, combinando los servicios que tu marca realmente necesita.</p>
+          <a class="btn btn-ghost-dark" href="https://wa.me/59894869933?text=Hola%20Gast%C3%B3n%2C%20quiero%20armar%20una%20propuesta%20personalizada%20para%20mi%20marca" target="_blank" rel="noopener">Pedir propuesta personalizada</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PRÓXIMAMENTE -->
+  <section class="soon">
+    <div class="wrap">
+      <div class="cat-header">
+        <div class="cat-badge">＋</div>
+        <div class="cat-label"><span class="eyebrow">En camino</span><h2>Próximamente en el catálogo</h2></div>
+      </div>
+      <div class="tag-cloud">
+        <span class="tag">Flyers digitales</span>
+        <span class="tag">Menús digitales</span>
+        <span class="tag">Tarjetas digitales</span>
+        <span class="tag">Tarjetas de presentación</span>
+        <span class="tag">CV profesionales</span>
+        <span class="tag">Portfolios profesionales</span>
+        <span class="tag">Documentos empresariales</span>
+        <span class="tag">Presupuestos profesionales</span>
+        <span class="tag">Planners</span>
+        <span class="tag">Calendarios</span>
+        <span class="tag">Certificados</span>
+        <span class="tag">Invitaciones digitales</span>
+        <span class="tag">Material para cursos</span>
+        <span class="tag">Kits para profesionales</span>
+        <span class="tag">Optimización de Instagram</span>
+        <span class="tag">Pack identidad emprendedor</span>
+        <span class="tag">Pack redes sociales</span>
+        <span class="tag">Pack web + identidad</span>
+        <span class="tag">Pack lanzamiento premium</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi">
+    <div class="wrap about">
+      <div class="about-photo"><img src="gaston-foto-perfil.png" alt="Gastón Figueredo, estratega de marca y creador de contenido"></div>
+      <div>
+        <span class="eyebrow">Sobre mí</span>
+        <h2>Gastón Figueredo</h2>
+        <p>Estratega de marca y creador de contenido. Especializado en ayudar a emprendedores y marcas personales a ordenar sus ideas, construir un mensaje claro y transformar su conocimiento en ventas reales.</p>
+        <p>Trabajo con negocios digitales y proyectos en crecimiento para estructurar su comunicación, fortalecer su posicionamiento y convertir atención en clientes. No se trata solo de crear contenido, sino de construir una marca con dirección, coherencia y estrategia.</p>
+        <p class="about-quote">"Mi misión es potenciar la voz única de cada negocio y facilitar que sus clientes conecten y confíen en ellos."</p>
+        <div class="stat-row">
+          <div class="stat-block">+5 años de experiencia en el sector del marketing</div>
+          <div class="stat-block">+17 clientes satisfechos con su posicionamiento digital</div>
+          <div class="stat-block">Alto porcentaje de retorno de inversión</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto">
+    <div class="final-cta">
+      <h2>¿Listo para darle identidad a tu marca?</h2>
+      <p>Contame en qué estás trabajando y armamos juntos el siguiente paso para tu emprendimiento.</p>
+      <a class="btn btn-gold" href="https://wa.me/59894869933?text=Hola%20Gast%C3%B3n%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios%20de%20dise%C3%B1o" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.25 0 4.35.87 5.94 2.46a8.3 8.3 0 0 1 2.45 5.87c0 4.56-3.75 8.27-8.35 8.27a8.3 8.3 0 0 1-4.18-1.14l-.3-.17-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.28-4.43c0-4.55 3.75-8.33 8.21-8.33z"/></svg>
+        +598 94 869 933
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a href="#top" class="brand"><img src="gaston-logo.png" alt="Gastón Creativo"></a>
+      <div class="foot-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="https://wa.me/59894869933" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Gastón Creativo — Gastón Figueredo. Diseño y marca para emprendedores.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/59894869933?text=Hola%20Gast%C3%B3n%2C%20quiero%20informaci%C3%B3n%20sobre%20tus%20servicios%20de%20dise%C3%B1o" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#0c2415" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.25 0 4.35.87 5.94 2.46a8.3 8.3 0 0 1 2.45 5.87c0 4.56-3.75 8.27-8.35 8.27a8.3 8.3 0 0 1-4.18-1.14l-.3-.17-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.28-4.43c0-4.55 3.75-8.33 8.21-8.33z"/></svg>
+</a>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
 </html>
